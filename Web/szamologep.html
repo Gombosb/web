@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+</head>
+<body>
+<div class="header">
+  <h1 style="text-align: center;">Gombos Bálint</h1>
+</div>
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+        <li class="a"><a href="index.html">FŐOLDAL</a></li>
+        <li class="a"><a href="keplink.html">KÉPLINK</a></li>
+        <li class="a"><a href="listak.html">LISTA</a></li>
+        <li class="a"><a href="tablazat.html">ÓRAREND</a></li>
+        <li class="a"><a href="urlap.html">ŰRLAP</a></li>
+        <li class="a"><a href="div.html">DIV</a></li>
+        <li class="a"><a href="szamologep.html">SZÁMOLÓGÉP</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <form action="javascript:void(0)">
+        <fieldset>
+            <legend style="color: rgb(255, 255, 255);">Számológép</legend>
+            <input type="number" name="szam" id="szam1" placeholder="szám"> -
+            <input type="number" name="szam" id="szam2" placeholder="szám"> =
+            <input type="text" id="eredmeny" placeholder="Eredmény" readonly>
+            <br>
+            <br>
+            <br>
+            <input type="button" name="muv" value="+" onclick="ad()">
+            <input type="button" name="muv" value="-" onclick="kiv()">
+            <input type="button" name="muv" value="*" onclick="szor()">
+            <input type="button" name="muv" value=":" onclick="oszt()">
+            <input type="reset" name="muv" value="Törlés">
+        </fieldset>
+    </form>
+
+</div>
+    
+  <div class="col-3 col-s-12" style="float:right;">
+    <div class="aside">
+      <h2>A képen a kollázsképem látható.</h2>
+       <img src="img/kollazs1.jpg" alt="A kollázsképem" title="kollázs" width="300">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><a href="mailto:gombosb@kkszki.hu">gombosb@kkszki.hu</a></p>
+</div>
+
+<script>
+    function ad() {
+        eredmeny.value = Number(szam1.value) + Number(szam2.value);
+    }
+
+    function kiv() {
+        eredmeny.value = Number(szam1.value) - Number(szam2.value);
+    }
+
+    function szor() {
+        eredmeny.value = Number(szam1.value) * Number(szam2.value);
+    }
+
+    function oszt() {
+        eredmeny.value = Number(szam1.value) / Number(szam2.value);
+    }
+</script>
+</body>
+</html>
